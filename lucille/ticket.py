@@ -13,15 +13,19 @@ Methodology:
 
 """
 
-from flask import Flask
+from flask import Flask, render_template
+
 app = Flask(__name__)
+@app.route('/issue/')
+def issue(name='Brian'):
+    return render_template('issue.html', name=name)
 
 @app.route('/')
 def main():
     # Containers to hold description and photos
     desc = []
     photo = []
-    return 'Hello world!'
+    return 'Main page'
 
 if __name__ == '__main__':
     main()
