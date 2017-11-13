@@ -1,7 +1,6 @@
 """
 Launching script main services
 """
-
 def main():
     pass
 
